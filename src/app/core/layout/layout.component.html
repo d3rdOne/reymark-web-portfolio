@@ -1,7 +1,12 @@
-<div class="main-container">
+<div
+  [ngClass]="{ dark: layoutService.theme == THEME.DARK }"
+  class="main-container bg-stone-100 dark:bg-stone-900 transition-all duration-300 mx-auto w-full min-h-screen grid grid-rows-[auto_1fr_auto]"
+>
   <!-- header herer -->
-  <div class="content-container">
+  <app-header></app-header>
+  <div class="content-container w-full mx-auto max-w-screen-lg">
     <ng-content></ng-content>
   </div>
   <!-- footer here -->
+  <footer>test</footer>
 </div>
