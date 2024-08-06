@@ -6,6 +6,7 @@ import { THEME } from '../enum/enum';
 })
 export class LayoutService {
   theme!: string;
+  expandMenu: boolean = true;
 
   constructor() {
     let themeStored = this.getLocalStorageTheme();
@@ -44,5 +45,9 @@ export class LayoutService {
 
   getLocalStorageTheme() {
     return localStorage.getItem('theme');
+  }
+
+  toggleMenu() {
+    this.expandMenu = !this.expandMenu;
   }
 }
