@@ -29,9 +29,10 @@
       <div
         class="flex flex-col lg:flex-row justify-center md:justify-start items-center sm:items-start gap-2 sm:gap-4 w-full"
       >
-        <button
-          (click)="downloadCV()"
-          class="w-4/5 sm:w-auto text-center text-stone-100 bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-base line-clamp-1 flex items-center justify-center gap-4"
+        <a
+          href="resume.pdf"
+          download="reymarkbacalso_resume.pdf"
+          class="w-4/5 sm:w-auto text-center text-stone-100 bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-base line-clamp-1 flex items-center justify-center gap-4 cursor-pointer"
         >
           <span>
             <svg
@@ -50,7 +51,7 @@
             </svg>
           </span>
           Download CV
-        </button>
+        </a>
         <button
           class="hidden w-full sm:w-auto text-center text-stone-700 bg-stone-100 py-2 px-6 focus:outline-none hover:bg-stone-200 rounded text-l flex items-center justify-center gap-4 border-[1px] border-stone-600 dark:border-stone-600"
         >

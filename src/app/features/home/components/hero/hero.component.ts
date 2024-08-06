@@ -9,7 +9,4 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
-  downloadCV() {
-    window.open(`https://drive.google.com/uc?export=download&id=13wZ03Ofd_7PyH_5iERhBF6guPI2bdraT`)
-  }
 }
