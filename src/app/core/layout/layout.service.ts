@@ -6,11 +6,11 @@ import { THEME } from '../enum/enum';
 })
 export class LayoutService {
   theme!: string;
-  expandMenu: boolean = true;
+  expandMenu: boolean = false;
 
   constructor() {
     let themeStored = this.getLocalStorageTheme();
-    this.theme = themeStored ? themeStored : THEME.LIGHT;
+    this.theme = themeStored ? themeStored : THEME.DARK;
     this.embedThemeToBody(this.theme);
 
   }
