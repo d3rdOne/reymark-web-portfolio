@@ -51,15 +51,18 @@
     </button>
   </div>
   <div
-    class="h-dvh w-full block sm:hidden transition-[height, transform, display] duration-300 relative"
+    class="w-full block sm:hidden transition-all duration-300 relative z-0"
     [ngClass]="{
-      'translate-y-0 opacity-1': layoutService.expandMenu,
+      '-translate-y-0 opacity-100 ': layoutService.expandMenu,
       '-translate-y-full h-0 opacity-0 duration-100': !layoutService.expandMenu
     }"
   >
     <div
-      class="flex flex-col px-4 py-2 justify-between h-[calc(100vh-4rem)]"
-      [ngClass]="{ hidden: !layoutService.expandMenu }"
+      class="flex flex-col px-4 py-2 justify-between h-[calc(100vh-4rem)] transition-opacity duration-700"
+      [ngClass]="{
+        'hidden opacity-0': !layoutService.expandMenu,
+        'block opacity-100': layoutService.expandMenu
+      }"
     >
       <div>
         <nav>
