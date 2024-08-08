@@ -26,8 +26,8 @@ export const PROJECTS: Project [] = [
       label: 'Angular',
       imgUrl: 'tools/angular.svg'
     }, {
-      label: 'Tailwind',
-      imgUrl: 'tools/tailwindcss.svg'
+      label: 'Bootstrap',
+      imgUrl: 'tools/bootstrap.svg'
     }, {
       label: 'NGRX',
       imgUrl: 'tools/ngrx.svg'
@@ -41,8 +41,12 @@ export const PROJECTS: Project [] = [
     description: `This is a personal project I developed while learning React and Tailwind during my career break. This utilizes API from https://jikan.moe/.`,
     technologies: [{label: 'React', imgUrl: 'tools/react.svg'},
       {
+        label: 'Axios',
+        imgUrl: 'tools/axios.svg'
+      },
+      {
         label: 'Tailwind',
-        imgUrl: 'tailwindcss.svg'
+        imgUrl: 'tools/tailwindcss.svg'
       }
     ]
   }
