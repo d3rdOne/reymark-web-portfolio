@@ -8,15 +8,52 @@
     <div
       class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-4/5 sm:w-full pl-8 sm:pl-0"
     >
-      <div
+      <ng-container *ngFor="let project of projects">
+        <div
+          class="h-64 w-full rounded-md border-[1px] border-stone-300 dark:border-stone-900 bg-stone-100/95 dark:bg-stone-800/80 shadow-lg dark:shadown-none relative transition-all duration-500"
+        >
+          <img
+            [src]="project.snapshot"
+            alt=""
+            class="absolute z-0 w-full h-full object-cover opacity-50 hidden rounded-md"
+          />
+          <div
+            class="w-full h-full p-4 px-6 flex flex-col justify-between text-stone-600 dark:text-stone-300 z-10 text-base"
+          >
+            <div>
+              <h6 class="text-base tracking-wider font-semibold uppercase">
+                {{ project.title }}
+              </h6>
+              <a
+                [href]="project.url"
+                target="_blank"
+                class="text-yellow-500 dark:hov underline underline-offset-4 text-sm"
+                >{{ project.url }}</a
+              >
+            </div>
+
+            <p
+              class="text-sm line-clamp-4 leading-relaxed"
+              [title]="project.description"
+            >
+              {{ project.description }}
+            </p>
+            <p>
+              Tech:
+              <ng-container *ngFor="let tech of project.technologies">
+                <span class="px-2 text-sm">{{ tech.label }}</span>
+              </ng-container>
+            </p>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- <div
         class="h-64 w-full rounded-md border-[1px] border-stone-300 dark:border-stone-900 bg-stone-100/85 dark:bg-stone-800/80 shadow-lg dark:shadown-none"
       ></div>
       <div
         class="h-64 w-full rounded-md border-[1px] border-stone-300 dark:border-stone-900 bg-stone-100/85 dark:bg-stone-800/80 shadow-lg dark:shadown-none"
-      ></div>
-      <div
-        class="h-64 w-full rounded-md border-[1px] border-stone-300 dark:border-stone-900 bg-stone-100/85 dark:bg-stone-800/80 shadow-lg dark:shadown-none"
-      ></div>
+      ></div> -->
     </div>
   </div>
 </div>
