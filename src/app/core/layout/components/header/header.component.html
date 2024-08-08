@@ -105,7 +105,7 @@
   <button
     class="px-2 transition-colors w-3/5 sm:w-fit flex justify-center"
     [ngClass]=""
-    (click)="toggleTheme()"
+    (click)="toggleTheme(); layoutService.expandMenu = false"
   >
     <!-- {{ layoutService.theme | titlecase }} -->
     <span [ngClass]="{ hidden: layoutService.theme == THEME.DARK }">

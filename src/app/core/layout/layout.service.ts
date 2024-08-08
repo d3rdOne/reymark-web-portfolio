@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { THEME } from '../enum/enum';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ import { THEME } from '../enum/enum';
 export class LayoutService {
   theme!: string;
   expandMenu: boolean = false;
+  scrollToElement$ = new Subject();
 
   constructor() {
     let themeStored = this.getLocalStorageTheme();
