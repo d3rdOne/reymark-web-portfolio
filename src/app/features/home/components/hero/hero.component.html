@@ -1,0 +1,107 @@
+<section
+  class="text-stone-600 dark:text-stone-400 body-font transition-all min-h-lvh md:min-h-[calc(100vh-16rem)] lg:min-h-full relative flex flex-col items-center justify-center md:justify-center mx-auto max-w-screen-md"
+>
+  <div
+    class="container mx-auto flex px-5 py-24 items-center justify-center flex-col sm:flex-row gap-4 sm:gap-8 md:gap-16"
+  >
+    <div
+      class="w-60 h-60 sm:w-72 sm:h-72 flex justify-center items-center min-h-48 transition-all duration-200 rounded-full"
+    >
+      <img
+        class="w-full h-full object-cover object-center transition-all duration-200 shadow-xl rounded-full bg-stone-300 dark:bg-stone-700"
+        alt="hero"
+        src="profile.png"
+      />
+    </div>
+
+    <div class="text-center sm:text-left sm:w-3/6">
+      <h1
+        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-stone-900 dark:text-stone"
+      >
+        <span class="dark:text-stone-200 tracking-wide"
+          >Hey! I'm Reymark Bacalso</span
+        >
+      </h1>
+      <p class="mb-8 leading-relaxed dark:text-stone-300">
+        Software Developer
+        <span class="border-l-2 border-l-stone-400 ml-2 pl-2">Frontend</span>
+      </p>
+      <div
+        class="flex flex-col lg:flex-row justify-center md:justify-start items-center sm:items-start gap-2 sm:gap-4 w-full"
+      >
+        <a
+          href="resume.pdf"
+          download="reymarkbacalso_resume.pdf"
+          class="w-4/5 sm:w-auto text-center text-stone-100 bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-base line-clamp-1 flex items-center justify-center gap-2 cursor-pointer shadow-lg dark:shadow-none"
+        >
+          <span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"
+              />
+            </svg>
+          </span>
+          <span>Download CV</span>
+        </a>
+        <button
+          class="hidden w-full sm:w-auto text-center text-stone-700 bg-stone-100 py-2 px-6 focus:outline-none hover:bg-stone-200 rounded text-l items-center justify-center gap-4 border-[1px] border-stone-600 dark:border-stone-600"
+        >
+          <span class="text-base">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+              />
+            </svg>
+          </span>
+          Contact Me
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex md:hidden items-center justify-center absolute bottom-4">
+    <button
+      (click)="scrollDownClicked.emit('about')"
+      class="text-stone-500 dark:text-stone-300 bg-stone-100/60 hover:bg-stone-100 dark:bg-stone-100/20 dark:hover:bg-stone-100/10 shadow-md dark:shadow-none rounded-sm text-sm px-8 py-1 animate-bounce w-fit flex items-center justify-center gap-1 cursor-pointer"
+    >
+      <span class="tracking-widest">More</span>
+      <span class="h-4 w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class=""
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</section>

@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="min-h-full">
+  <app-hero (scrollDownClicked)="scrollDownClicked($event)"></app-hero>
+  <!-- <app-cta></app-cta> -->
+  <div
+    class="flex flex-col justify-start md:justify-center md:flex-col items-start gap-0 md:gap-8 bg-stone-100/85 dark:bg-stone-900/85 min-h-dvh md:min-h-full pb-12"
+  >
+    <app-about-me id="about" class="w-full"></app-about-me>
+
+    <app-skill class="w-full"></app-skill>
+
+    <app-experience class="w-full"></app-experience>
+  </div>
+  <app-cta></app-cta>
+
+  <div class="dark:bg-stone-900/85"></div>
+  <app-footer></app-footer>
+</div>

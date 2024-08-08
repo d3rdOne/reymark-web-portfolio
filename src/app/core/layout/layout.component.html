@@ -1,7 +1,12 @@
-<div class="main-container">
+<div
+  [ngClass]="{ dark: layoutService.theme == THEME.DARK }"
+  class="main-container bg-stone-200 dark:bg-stone-900 transition-all duration-300 mx-auto w-full min-h-screen grid grid-rows-[auto_1fr]"
+>
   <!-- header herer -->
-  <div class="content-container">
-    <ng-content></ng-content>
+  <app-header></app-header>
+  <div class="content-container w-full md:mt-[4.3rem]">
+    <ng-scrollbar>
+      <ng-content></ng-content>
+    </ng-scrollbar>
   </div>
-  <!-- footer here -->
 </div>

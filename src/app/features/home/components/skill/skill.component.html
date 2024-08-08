@@ -1,0 +1,37 @@
+<div
+  class="text-stone-600 transition-all duration-300 flex flex-col items-center justify-start md:justify-center w-full mx-auto max-w-screen-md"
+>
+  <div
+    class="container mx-auto px-5 sm:py-12 items-center justify-center gap-4 w-full"
+  >
+    <h3 class="font-bold text-2xl mb-6 dark:text-stone-300 tracking-wide">
+      Tools and Frameworks
+    </h3>
+    <div
+      class="w-full flex flex-wrap gap-2 sm:gap-4 justify-start sm:justify-start"
+    >
+      <ng-container *ngFor="let tool of tools">
+        <!-- <div class=""> -->
+        <a
+          class="border-[1px] border-stone-300 dark:border-stone-900 bg-stone-100/70 dark:bg-stone-800/50 h-24 w-24 rounded-md p-4 flex flex-col items-center justify-center cursor-pointer hover:-translate-y-1 transition-all duration-700"
+        >
+          <img
+            [src]="tool.imgUrl"
+            alt="{{ tool.label }}"
+            loading="eager"
+            class="h-3/5 w-3/5 sm:h-3/6 sm:w-3/6 object-scale-down"
+          />
+          <p
+            for=""
+            class="text-stone-600 dark:text-stone-300 mt-2 text-xs tracking-wide text-center"
+            title="{{ tool.label }}"
+          >
+            {{ tool.label }}
+          </p>
+          <!-- {{ tool.title }} -->
+        </a>
+        <!-- </div> -->
+      </ng-container>
+    </div>
+  </div>
+</div>
