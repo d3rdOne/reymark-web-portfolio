@@ -10,18 +10,13 @@
     >
       <ng-container *ngFor="let project of projects">
         <div
-          class="h-64 w-full rounded-md border-[1px] border-stone-400 dark:border-stone-900 bg-stone-100/95 dark:bg-stone-800/80 shadow-lg dark:shadown-none relative hover:shadow-2xl dark:hover:bg-stone-800 transition-all duration-500"
+          class="min-h-72 w-full rounded-md border-[1px] border-stone-400 dark:border-stone-900 bg-stone-100/95 dark:bg-stone-800/80 shadow-lg dark:shadown-none relative hover:shadow-2xl dark:hover:bg-stone-800 transition-all duration-500"
         >
-          <img
-            [src]="project.snapshot"
-            alt=""
-            class="absolute z-0 w-full h-full object-cover opacity-50 hidden rounded-md"
-          />
           <div
             class="w-full h-full p-4 px-6 flex flex-col text-stone-600 dark:text-stone-300 z-10 text-base"
           >
             <div>
-              <div class="flex flex-wrap justify-between gap-2">
+              <div class="flex flex-wrap justify-between">
                 <h6 class="text-base tracking-wider font-semibold uppercase">
                   {{ project.title }}
                 </h6>
@@ -72,7 +67,7 @@
             </div>
 
             <p
-              class="text-sm line-clamp-4 leading-relaxed mt-6"
+              class="text-sm leading-relaxed mt-6 mb-4"
               [title]="project.description"
             >
               {{ project.description }}
